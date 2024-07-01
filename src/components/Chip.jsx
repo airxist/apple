@@ -29,7 +29,7 @@ const Chip = () => {
     gsap.to('#chip-video', {
       scrollTrigger: {
         trigger: '#chip-video',
-        toggleActions: 'play pause restart none',
+        toggleActions: 'play pause resume reset',
         start: 'top center'
       },
       onComplete () {
