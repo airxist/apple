@@ -25,6 +25,17 @@ const Chip = () => {
       duration: 2,
       ease: 'power2.inOut'
     })
+
+    gsap.to('#chip-video', {
+      scrollTrigger: {
+        trigger: '#chip-video',
+        toggleActions: 'play pause restart none',
+        start: 'top center'
+      },
+      onComplete () {
+        videoRef.current.play();
+      }
+    })
   }, [])
 
   return (
@@ -56,6 +67,7 @@ const Chip = () => {
             <div className="hiw-video">
                 <video
                   className='pointer-events-none'
+                  id='chip-video'
                   playsInline
                   preload='none'
                   muted
